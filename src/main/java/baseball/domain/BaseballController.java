@@ -2,23 +2,23 @@ package baseball.domain;
 
 import baseball.view.InputView;
 import baseball.view.OutputView;
-import java.util.Objects;
+import camp.nextstep.edu.missionutils.Console;
 
 public class BaseballController {
-    private InputView inputView;
-    private OutputView outputView;
 
-    public BaseballController(InputView inputView, OutputView outputView) {
-        this.inputView = inputView;
-        this.outputView = outputView;
+    public BaseballController() {
     }
 
     public void init() {
-        outputView.start();
+        OutputView.start();
 
         while(true) {
-            Computer computer = new Computer();
-            computer.setComputer();
+            ComputerBall computerBall = new ComputerBall();
+
+            InputView.inputState();
+            String inputBall = Console.readLine();
+
+            UserBall userBall = new UserBall(inputBall);
 
         }
     }
