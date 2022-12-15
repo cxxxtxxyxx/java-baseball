@@ -16,6 +16,9 @@ public class ComputerBall {
             }
         }
     }
+    public void nums() {
+        System.out.println(computerBall);
+    }
 
     public int getBall(int position) {
         return computerBall.get(position);

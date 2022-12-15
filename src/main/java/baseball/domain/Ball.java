@@ -10,10 +10,8 @@ public enum Ball {
         this.label = label;
     }
 
-//    public String ballFormat(int ball, int strike) {
-//        String result =
-//        if(ball != 0) {
-//
-//        }
-//    }
+    public String getLabel() {
+        return this.label;
+    }
+
 }

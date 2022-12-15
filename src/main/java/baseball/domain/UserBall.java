@@ -10,7 +10,6 @@ public class UserBall {
 
     public UserBall(String inputBall) {
         checkBallFormat(inputBall);
-
         this.userBall = new ArrayList<Integer>();
         String [] balls = inputBall.split("");
         checkBallDuplication(balls);
@@ -36,6 +35,9 @@ public class UserBall {
 
     public int getBall(int position) {
         return userBall.get(position);
+    }
+    public void nums() {
+        System.out.println(userBall);
     }
 
     public boolean contains(int ball) {

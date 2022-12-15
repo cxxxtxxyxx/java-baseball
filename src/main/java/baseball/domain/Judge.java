@@ -20,6 +20,12 @@ public class Judge {
             put(BALL, 0);
         }};
 
+        checkBallState(hint);
+
+        return hint;
+    }
+
+    private void checkBallState(HashMap<Ball, Integer> hint) {
         for(int i = 0; i < 3; i++) {
             if(isStrike(i)) {
                 int prevCount = hint.get(STRIKE);
@@ -31,8 +37,6 @@ public class Judge {
                 hint.put(BALL, prevCount + 1);
             }
         }
-
-        return hint;
     }
     private boolean isStrike(int position) {
         return computerBall.getBall(position) == userBall.getBall(position);
@@ -41,4 +45,5 @@ public class Judge {
     private boolean isBall(int ball) {
         return computerBall.contains(ball);
     }
+
 }
