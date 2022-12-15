@@ -6,16 +6,17 @@ import java.util.HashSet;
 import java.util.List;
 
 public class UserBall {
-    List<Integer> computerBall;
+    List<Integer> userBall;
 
     public UserBall(String inputBall) {
         checkBallFormat(inputBall);
 
-        this.computerBall = new ArrayList<Integer>();
+        this.userBall = new ArrayList<Integer>();
         String [] balls = inputBall.split("");
+        checkBallDuplication(balls);
         Arrays.stream(balls)
                 .forEach(ball -> {
-                    computerBall.add(Integer.parseInt(ball));
+                    userBall.add(Integer.parseInt(ball));
                 });
     }
 
@@ -31,5 +32,13 @@ public class UserBall {
         if(validBalls.size() != 3) {
             throw new IllegalArgumentException("[ERROR] 중복이 되지 않도록 입력해 주세요.");
         }
+    }
+
+    public int getBall(int position) {
+        return userBall.get(position);
+    }
+
+    public boolean contains(int ball) {
+        return userBall.contains(ball);
     }
 }

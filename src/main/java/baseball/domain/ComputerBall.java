@@ -16,4 +16,13 @@ public class ComputerBall {
             }
         }
     }
+
+    public int getBall(int position) {
+        return computerBall.get(position);
+    }
+
+    public boolean contains(int ball) {
+        return computerBall.contains(ball);
+    }
+
 }

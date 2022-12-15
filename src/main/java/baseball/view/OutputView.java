@@ -6,4 +6,8 @@ public class OutputView {
     public static void start() {
         System.out.println(OutputView.GAME_START);
     }
+
+    public static void errorState(IllegalArgumentException e) {
+        System.out.println(e);
+    }
 }
