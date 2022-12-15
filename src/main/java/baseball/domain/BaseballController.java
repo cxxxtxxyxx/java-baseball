@@ -15,5 +15,11 @@ public class BaseballController {
 
     public void init() {
         outputView.start();
+
+        while(true) {
+            Computer computer = new Computer();
+            computer.setComputer();
+
+        }
     }
 }
